@@ -1,0 +1,3 @@
+[submodule "components/hx711/HX711_IDF"]
+	path = components/hx711/HX711_IDF
+	url = git@github.com:akshayvernekar/HX711_IDF.git
