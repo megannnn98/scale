@@ -33,6 +33,13 @@ public:
     m_offset = ReadAverage(20);
   }
 
+  Hx711() = delete;
+  Hx711(const Hx711&) = delete;
+  Hx711& operator=(const Hx711&) = delete;
+  Hx711(Hx711&&) = delete;
+  Hx711& operator=(Hx711&&) = delete;
+  ~Hx711() = default;
+
   [[nodiscard]] bool IsReady() const { return gpio_get_level(m_dout); }
 
   [[nodiscard]] std::uint32_t Read() const {
