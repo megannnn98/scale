@@ -103,10 +103,10 @@ public:
   {
     esp_mqtt_client_config_t mqttCfg{};
     mqttCfg.uri = url.data();
-    mqttCfg.client_id = clientId.data();
-    mqttCfg.cert_pem = rootCert.data();
-    mqttCfg.client_cert_pem = clientCert.data();
-    mqttCfg.client_key_pem = privateKey.data();
+    // mqttCfg.client_id = clientId.data();
+    // mqttCfg.cert_pem = rootCert.data();
+    // mqttCfg.client_cert_pem = clientCert.data();
+    // mqttCfg.client_key_pem = privateKey.data();
     mqttCfg.event_handle = m_MqttEventHandler;
     mqttCfg.buffer_size = bufferSize;
     mqttCfg.keepalive = KEEP_ALIVE;

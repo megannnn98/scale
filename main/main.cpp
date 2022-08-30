@@ -12,6 +12,7 @@
 #include <mqtt-helper/mqtt-helper.hpp>
 #include <string>
 #include <thread>
+#include <nvs_flash.h>
 
 
 

@@ -1,1 +1,1 @@
-idf_component_register(INCLUDE_DIRS include REQUIRES driver esp_rom mqtt-helper)
+idf_component_register(INCLUDE_DIRS include REQUIRES driver esp_rom mqtt-helper weight-meter)

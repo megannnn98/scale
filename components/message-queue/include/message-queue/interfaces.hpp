@@ -12,6 +12,7 @@ enum class Id : std::uint16_t {
   eNone, // use as source id
   eAll,  // use as destination id
   eWeightMeter,
+  eLogic
 };
 
 struct Addr {
