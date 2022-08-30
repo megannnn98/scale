@@ -11,23 +11,7 @@ namespace mq {
 enum class Id : std::uint16_t {
   eNone, // use as source id
   eAll,  // use as destination id
-  eButton,
-  eBuzzer,
-  eAwsJobs,
-  eAwsOta,
-  eLedSystem,
-  eZigbee,
-  eWimea,
-  eCli,
-  eLogic,
-  eEth,
-  eWifi,
-  eModem,
-  eNetManager,
-  eBle,
-  eGpio,
-  eTraits,
-  eNotification,
+  eWeightMeter,
 };
 
 struct Addr {
