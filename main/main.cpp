@@ -1,14 +1,17 @@
-#include <thread>
 #include <chrono>
-#include <memory>
-#include <string>
+#include <esp_log.h>
 #include <freertos/FreeRTOS.h>
 #include <freertos/task.h>
-#include <esp_log.h>
 #include <hx711/hx711.hpp>
 #include <filter/filter.hpp>
 #include <push-button/push-button.hpp>
 #include <memory>
+#include <message-queue/context.hpp>
+#include <message-queue/interfaces.hpp>
+#include <message-queue/scheduler.hpp>
+#include <mqtt-helper/mqtt-helper.hpp>
+#include <string>
+#include <thread>
 
 
 
@@ -33,4 +36,9 @@ extern "C" void app_main(void)
         // ESP_LOGI(TAG, "******* weight = %u", (unsigned)weight);
         std::this_thread::sleep_for(std::chrono::seconds{1});
     }
+  }
+} catch (const std::exception &e) {
+  ESP_LOGE("Unhandled exception", "%s", e.what());
+  std::this_thread::sleep_for(std::chrono::seconds{5U});
+  esp_restart();
 }

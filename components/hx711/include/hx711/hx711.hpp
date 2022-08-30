@@ -3,6 +3,7 @@
 #include <driver/gpio.h>
 #include <rom/ets_sys.h>
 #include <rom/gpio.h>
+#include <thread>
 
 class Hx711 {
 public:
