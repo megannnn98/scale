@@ -5,6 +5,8 @@
 #include <memory>
 #include <message-queue/interfaces.hpp>
 #include <utils/utils.hpp>
+#include <mqtt-helper/mqtt-helper.hpp>
+
 
 class Logic final : public mq::ISystem {
   static constexpr const char *TAG = "Logic";
