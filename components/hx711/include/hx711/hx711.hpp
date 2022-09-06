@@ -10,7 +10,7 @@ public:
 
   static constexpr bool LOW = false;
   static constexpr bool HIGH = (!LOW);
-  static constexpr std::uint32_t CLOCK_DELAY_US = 20UL;
+  static constexpr std::uint32_t CLOCK_DELAY_US = 50UL;
   static constexpr const char *TAG = "HX711";
   static constexpr float RAW_TO_GRAMMS = 107.73;
 
