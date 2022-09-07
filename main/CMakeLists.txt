@@ -5,6 +5,7 @@ idf_component_register(
     driver
     hx711
     filter
+    push-button
 )
 
 target_compile_options(${COMPONENT_LIB} PRIVATE -Wall -Wextra -Werror)
