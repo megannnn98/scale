@@ -10,14 +10,14 @@
 #include <memory>
 
 #define AVG_SAMPLES   10
-#define GPIO_DATA   GPIO_NUM_2
-#define GPIO_SCLK   GPIO_NUM_16
 static const char* TAG = "HX711_TEST";
 
 extern "C" void app_main(void)
 {
 
-    auto hx711 = std::make_unique<Hx711>(GPIO_DATA, GPIO_SCLK, Hx711::Gain::e128);
+    auto hx711 = std::make_unique<Hx711>(static_cast<gpio_num_t>(CONFIG_DATA_PIN), 
+                                         static_cast<gpio_num_t>(CONFIG_SCLK_PIN), 
+                                         Hx711::Gain::e128);
     float weight{hx711->GetUnits(AVG_SAMPLES)};
     auto kalman = std::make_unique<Filter>(0.5f, weight);
 
@@ -25,6 +25,6 @@ extern "C" void app_main(void)
     {
         weight = kalman->filter(hx711->GetUnits(AVG_SAMPLES));
         ESP_LOGI(TAG, "******* weight = %u", (unsigned)weight);
-        std::this_thread::sleep_for(std::chrono::milliseconds{100});
+        std::this_thread::sleep_for(std::chrono::seconds{1});
     }
 }

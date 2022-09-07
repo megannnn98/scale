@@ -1,0 +1,13 @@
+menu "PIN CONFIGURATION"
+
+    config DATA_PIN
+        int "DATA GPIO number"
+        range 0 48
+        default 2
+
+    config SCLK_PIN
+        int "SCLK GPIO number"
+        range 0 48
+        default 16
+
+endmenu
