@@ -133,11 +133,12 @@ CONFIG_PARTITION_TABLE_MD5=y
 # end of Partition Table
 
 #
-# PIN CONFIGURATION
+# Pin configuration
 #
 CONFIG_DATA_PIN=2
 CONFIG_SCLK_PIN=16
-# end of PIN CONFIGURATION
+CONFIG_BUTTON_PIN=0
+# end of Pin configuration
 
 #
 # Compiler options

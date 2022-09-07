@@ -1,4 +1,4 @@
-menu "PIN CONFIGURATION"
+menu "Pin configuration"
 
     config DATA_PIN
         int "DATA GPIO number"
@@ -9,5 +9,10 @@ menu "PIN CONFIGURATION"
         int "SCLK GPIO number"
         range 0 48
         default 16
+
+    config BUTTON_PIN
+        int "BUTTON GPIO number"
+        range 0 48
+        default 0
 
 endmenu
