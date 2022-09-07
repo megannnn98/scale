@@ -29,8 +29,8 @@ extern "C" void app_main(void)
 
     while (true) 
     {
-        weight = kalman->filter(hx711->GetUnits(AVG_SAMPLES));
-        ESP_LOGI(TAG, "******* weight = %u", (unsigned)weight);
+        // weight = kalman->filter(hx711->GetUnits(AVG_SAMPLES));
+        // ESP_LOGI(TAG, "******* weight = %u", (unsigned)weight);
         std::this_thread::sleep_for(std::chrono::seconds{1});
     }
 }

@@ -4,6 +4,7 @@
 
 class PushButton {
 
+  static constexpr const char* TAG = "PushButton";
   gpio_num_t pin_;
   button_handle_t handle_;
 public:
@@ -12,6 +13,7 @@ public:
   {
       // TEST_ASSERT_EQUAL_HEX(BUTTON_PRESS_DOWN, iot_button_get_event(arg));
       // ESP_LOGI(TAG, "BTN%d: BUTTON_PRESS_DOWN", get_btn_index((button_handle_t)arg));
+      ESP_LOGI(TAG, "BTN: BUTTON_PRESS_DOWN");
   }
 
   PushButton(gpio_num_t pin)
