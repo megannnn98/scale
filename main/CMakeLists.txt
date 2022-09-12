@@ -6,6 +6,7 @@ idf_component_register(
     hx711
     filter
     push-button
+    sdmmc
 )
 
 target_compile_options(${COMPONENT_LIB} PRIVATE -Wall -Wextra -Werror)
